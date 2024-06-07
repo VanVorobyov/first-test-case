@@ -1,0 +1,53 @@
+{
+	"name": "first-test-case",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+		"preview": "vite preview",
+		"prepare": "husky install",
+		"commit": "git cz"
+	},
+	"dependencies": {
+		"@types/node-sass": "^4.11.7",
+		"@types/sass": "^1.45.0",
+		"commitizen": "^4.3.0",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"scss": "^0.2.4"
+	},
+	"devDependencies": {
+		"@types/react": "^18.3.3",
+		"@types/react-dom": "^18.3.0",
+		"@typescript-eslint/eslint-plugin": "^7.12.0",
+		"@typescript-eslint/parser": "^7.12.0",
+		"@vitejs/plugin-react": "^4.2.1",
+		"cz-conventional-changelog": "^3.3.0",
+		"eslint": "^8.57.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-import": "^2.29.1",
+		"eslint-plugin-jsx-a11y": "^6.8.0",
+		"eslint-plugin-react": "^7.34.2",
+		"eslint-plugin-react-hooks": "^4.6.2",
+		"eslint-plugin-react-refresh": "^0.4.6",
+		"husky": "^9.0.11",
+		"lint-staged": "^15.2.5",
+		"prettier": "3.3.1",
+		"sass": "^1.77.4",
+		"typescript": "^5.2.2",
+		"vite": "^5.2.0",
+		"vite-plugin-style-import": "^2.0.0"
+	},
+	"lint-staged": {
+		"*.{ts,tsx}": "eslint --cache --fix",
+		"*.{js,scss,css,md}": "prettier --write"
+	},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
+	}
+}
