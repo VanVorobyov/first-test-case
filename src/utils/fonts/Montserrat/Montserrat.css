@@ -25,7 +25,7 @@
 /** Montserrat Regular **/
 @font-face {
 	font-family: 'Montserrat Regular';
-	font-weight: normal;
+	font-weight: 400;
 	font-style: normal;
 	src: url('./Montserrat-Regular.woff') format('woff');
 }

@@ -1,0 +1,73 @@
+@import '@/utils/styles/color-variables';
+@import '@/utils/styles/font-variables';
+
+.button {
+	padding: 0;
+	border: none;
+	font-style: normal;
+	line-height: normal;
+	border-radius: 24px;
+	color: $--Colors-White;
+	font-size: $--Font-Size-Button-Primary-1440;
+	cursor: pointer;
+	width: auto;
+	height: 50px;
+	transition: all 0.3s ease-in-out;
+
+	&_limited {
+		width: 300px;
+	}
+
+	&_box {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 4px;
+	}
+
+	&_title {
+		font-family: $--Font-Montserrat-SemiBold;
+		text-transform: uppercase;
+	}
+
+	&_subtitle {
+		font-family: $--Font-Montserrat-Regular;
+		text-transform: lowercase;
+	}
+
+	&_primary {
+		background-color: $--Colors-Blue;
+
+		&:hover {
+			background-color: $--Colors-Blue-Hover;
+		}
+	}
+
+	&_secondary {
+		background-color: $--Colors-Green;
+
+		&:hover {
+			background-color: $--Colors-Green-Hover;
+		}
+	}
+
+	&_error {
+		background-color: transparent;
+		border: 1px solid $--Colors-Red;
+
+		&:hover {
+			border: 1px solid $--Colors-Red-Hover;
+		}
+	}
+
+	&:hover {
+		box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+	}
+
+	&:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+		background-color: $--Colors-Light-Gray;
+	}
+}
