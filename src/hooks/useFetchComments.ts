@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { BASE_URL, UNKNOWN_ERROR } from '@utils/constants.ts';
+import { IComment } from '@components/Comment/types.ts';
 
 export const useFetchComments = (id: number) => {
-	const [comments, setComments] = useState<Comment[]>([]);
+	const [comments, setComments] = useState<IComment[]>([]);
 	const [loading, setLoading] = useState<boolean>(true);
 	const [error, setError] = useState<string | null>(null);
 
@@ -22,7 +23,7 @@ export const useFetchComments = (id: number) => {
 		};
 
 		fetchComments();
-	}, []);
+	}, [id]);
 
 	return { comments, loading, error };
 };
