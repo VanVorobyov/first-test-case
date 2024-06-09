@@ -7,9 +7,8 @@
 	justify-content: flex-start;
 	gap: 21px;
 	height: 100vh;
-	max-width: 327px;
 	padding: 90px 187px;
-	background-color: $--Colors-Middle-Gray;
+	background-color: $--Colors-Dark-Gray;
 
 	font-family: 'Montserrat Bold', sans-serif;
 	color: $--Colors-White;
@@ -17,7 +16,6 @@
 	font-style: normal;
 	font-weight: 700;
 	line-height: normal;
-	text-transform: uppercase;
 
 	@media screen and (max-width: 1439px) {
 		font-size: $--Font-Size-Title-1024;

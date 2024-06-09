@@ -1,29 +1,29 @@
 import styles from './styles.module.scss';
-import { Button } from '@components/Button/Button.tsx';
-import { ButtonList } from '@components/ButtonList/ButtonList.tsx';
+import { FilmInfo } from '@components/FilmInfo/FilmInfo.tsx';
+import { IFilmInfo } from '@components/FilmInfo/types.ts';
 
 export const Layout = () => {
+	const data: IFilmInfo = {
+		id: 5,
+		title: 'Наименование видео',
+		image: 'https://picsum.photos/id/5/232/342',
+		genre: ['Приключения'],
+		production: {
+			year: '2021',
+			country: 'Россия',
+		},
+		labels: {
+			fullhd: true,
+			subtitles: true,
+			age_restrictions: '18+',
+		},
+	};
+
 	return (
 		<>
 			<div className={styles.container}>
-				Наши фильмы
-				<Button
-					title="СМОТРЕТЬ"
-					width={'auto'}
-					subtitle="осталось смотреть 7 дней"
-					onClick={() => {
-						console.log(`кнопка нажата --> `);
-					}}
-				/>
-				<Button
-					title="СМОТРЕТЬ за 1 ₽ без рекламы "
-					isSecondary
-					width={'auto'}
-					onClick={() => {
-						console.log(`кнопка нажата --> `);
-					}}
-				/>
-				<ButtonList />
+				ВЫБРАННОЕ ВИДЕО
+				<FilmInfo {...data} />
 			</div>
 		</>
 	);

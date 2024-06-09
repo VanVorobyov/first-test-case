@@ -1,0 +1,121 @@
+@import '@/utils/styles/color-variables';
+@import '@/utils/styles/font-variables';
+
+.container {
+	max-width: 1000px;
+	width: 100%;
+	background-color: $--Colors-Middle-Gray;
+
+	border-radius: 24px;
+	padding: 57px 61px;
+
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+	gap: 40px;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	gap: 9px;
+}
+
+.film {
+	&_wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		gap: 21px;
+	}
+
+	&_info {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		gap: 14px;
+	}
+
+	&_title {
+		margin: 0;
+
+		font-family: $--Font-Montserrat-Bold;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+
+		color: $--Colors-White;
+	}
+
+	&_subtitle {
+		&_wrapper {
+			display: flex;
+			gap: 12px;
+		}
+
+		border-radius: 13px;
+		background: #747587;
+
+		color: $--Colors-Black;
+
+		padding: 0 4px;
+
+		font-family: $--Font-Montserrat-Bold;
+		font-size: 10px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 20px; /* 200% */
+	}
+
+	&_production_wrapper {
+		display: flex;
+		justify-content: flex-start;
+		gap: 8px;
+	}
+
+	&_production {
+		font-family: $--Font-Montserrat-Medium;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 20px; /* 142.857% */
+
+		color: $--Colors-Light-Gray;
+	}
+
+	&_image {
+		border-radius: 15px;
+
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 342px;
+		width: 232px;
+	}
+
+	&_rating {
+		&_wrapper {
+			display: flex;
+			align-items: center;
+			gap: 4px;
+		}
+
+		&_logo {
+			background-image: url('@/assets/kinopoisk.svg');
+			width: 79px;
+			height: 17px;
+			background-size: contain;
+			background-repeat: no-repeat;
+			padding-top: 1px;
+		}
+
+		color: $--Colors-Light-Gray;
+		font-family: $--Font-Montserrat-Bold;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+		position: relative;
+	}
+}
