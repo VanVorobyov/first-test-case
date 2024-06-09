@@ -3,7 +3,7 @@ import { BASE_URL, UNKNOWN_ERROR } from '@utils/constants.ts';
 import { IFilmInfo } from '@components/FilmInfo/types.ts';
 import useLocalStorage from '@hooks/useLocalStorage.ts';
 
-export const useFetchFilmInfo = (id: number) => {
+export const useFetchFilmInfo = (id: string) => {
 	const [filmInfo, setFilmInfo] = useState<IFilmInfo>({} as IFilmInfo);
 	const [loading, setLoading] = useState<boolean>(true);
 	const [error, setError] = useState<string | null>(null);

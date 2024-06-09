@@ -4,7 +4,7 @@ import { Comment } from '@components/Comment/Comment.tsx';
 import { IComment } from '@components/Comment/types.ts';
 
 export interface ICommentList {
-	id: number;
+	id: string;
 }
 
 export const CommentList: FC<ICommentList> = ({ id }) => {

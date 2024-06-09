@@ -1,0 +1,31 @@
+@import '@/utils/styles/color-variables';
+@import '@/utils/styles/font-variables';
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	gap: 21px;
+	height: 100vh;
+	padding: 90px 187px;
+	background-color: $--Colors-Dark-Gray;
+
+	@media screen and (max-width: 1439px) {
+		font-size: $--Font-Size-Title-1024;
+	}
+
+	@media screen and (max-width: 744px) {
+		font-size: $--Font-Size-Title-Mobile;
+	}
+}
+
+.title {
+	margin: 0;
+
+	font-family: 'Montserrat Bold', sans-serif;
+	color: $--Colors-White;
+	font-size: $--Font-Size-Title-1440;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}

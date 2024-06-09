@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { BASE_URL, UNKNOWN_ERROR } from '@utils/constants.ts';
 import { IComment } from '@components/Comment/types.ts';
 
-export const useFetchComments = (id: number) => {
+export const useFetchComments = (id: string) => {
 	const [comments, setComments] = useState<IComment[]>([]);
 	const [loading, setLoading] = useState<boolean>(true);
 	const [error, setError] = useState<string | null>(null);
