@@ -1,0 +1,52 @@
+@import '@/utils/styles/color-variables';
+@import '@/utils/styles/font-variables';
+
+.iconbutton {
+	padding: 0;
+	border: none;
+	font-style: normal;
+	line-height: normal;
+	border-radius: 24px;
+	color: $--Colors-White;
+	background-color: $--Colors-Dark-Gray;
+	font-size: $--Font-Size-Button-Primary-1440;
+	font-family: $--Font-Montserrat-Bold;
+	cursor: pointer;
+	width: 50px;
+	min-width: 50px;
+	//overflow: hidden;
+	height: 48px;
+	transition: all 0.3s ease-in-out;
+
+	&_box {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 12px;
+	}
+
+	&_short {
+		width: 150px;
+	}
+
+	&_icon {
+		color: $--Colors-White;
+		width: 20px;
+		height: 20px;
+	}
+
+	&_subtitle {
+		text-transform: uppercase;
+	}
+
+	&:hover {
+		background-color: $--Colors-Dark-Gray-Hover;
+		transform: scale(105%);
+	}
+
+	&:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+		background-color: $--Colors-Light-Gray;
+	}
+}
