@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC, useMemo, useState } from 'react';
 import styles from './Form.module.scss';
 import { Button } from '@components/Button/Button.tsx';
 import { BASE_URL } from '@utils/constants.ts';
@@ -17,46 +17,48 @@ export const Form: FC<IFormProps> = ({ id }) => {
 	const [isError, setIsError] = useState(false);
 	const [isSuccess, setisSuccess] = useState(false);
 
-	const handleSubmit = (event: { preventDefault: () => void }) => {
-		event.preventDefault();
-		if (!title || !city) {
-			setError({
-				title: 'Поле не заполнено',
-				city: 'Поле не заполнено',
-			});
-			return;
-		}
-
-		if (title && city) {
-			setError({
-				title: '',
-				city: '',
-			});
-
-			fetch(`${BASE_URL}comments/post/${id}`, {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify({ title, city, description }),
-			})
-				.then((response) => response.json())
-				.then((data) => {
-					console.log(data);
-					setbtnTitle('Отправлено');
-					setisSuccess(true);
-				})
-				.catch((error) => {
-					console.error(error);
-					setIsError(true);
-					setbtnTitle('Произошла ошибка');
-					setTimeout(() => {
-						setIsError(false);
-						setbtnTitle('Отправить');
-					}, 3000);
+	const handleSubmit = useMemo(() => {
+		return (event: { preventDefault: () => void }) => {
+			event.preventDefault();
+			if (!title || !city) {
+				setError({
+					title: 'Поле не заполнено',
+					city: 'Поле не заполнено',
 				});
-		}
-	};
+				return;
+			}
+
+			if (title && city) {
+				setError({
+					title: '',
+					city: '',
+				});
+
+				fetch(`${BASE_URL}comments/post/${id}`, {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json',
+					},
+					body: JSON.stringify({ title, city, description }),
+				})
+					.then((response) => response.json())
+					.then((data) => {
+						console.log(data);
+						setbtnTitle('Отправлено');
+						setisSuccess(true);
+					})
+					.catch((error) => {
+						console.error(error);
+						setIsError(true);
+						setbtnTitle('Произошла ошибка');
+						setTimeout(() => {
+							setIsError(false);
+							setbtnTitle('Отправить');
+						}, 3000);
+					});
+			}
+		};
+	}, [title, city, description]);
 
 	return (
 		<form onSubmit={handleSubmit} className={styles.form}>
