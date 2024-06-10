@@ -3,9 +3,9 @@ import { FC } from 'react';
 import { Comment } from '@components/Comment/Comment.tsx';
 import { IComment } from '@components/Comment/types.ts';
 
-export interface ICommentList {
+export type ICommentList = {
 	id: string;
-}
+};
 
 export const CommentList: FC<ICommentList> = ({ id }) => {
 	const { comments, loading, error } = useFetchComments(id);

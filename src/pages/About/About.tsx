@@ -3,6 +3,7 @@ import { FilmInfo } from '@components/FilmInfo/FilmInfo.tsx';
 import { CommentList } from '@components/CommentList/CommentList.tsx';
 import { useFetchFilmInfo } from '@hooks/useFetchFilmInfo.ts';
 import { useParams } from 'react-router-dom';
+import { Form } from '@components/Form/Form.tsx';
 
 export const About = () => {
 	const { id } = useParams();
@@ -23,6 +24,7 @@ export const About = () => {
 				<h1 className={styles.title}>ВЫБРАННОЕ ВИДЕО</h1>
 				<FilmInfo {...filmInfo} />
 				<CommentList id={id as string} />
+				<Form id={id as string} />
 			</div>
 		</>
 	);

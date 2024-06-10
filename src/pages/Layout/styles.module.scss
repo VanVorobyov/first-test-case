@@ -6,9 +6,8 @@
 	flex-direction: column;
 	justify-content: flex-start;
 	gap: 21px;
-	height: 100vh;
+	height: 100%;
 	padding: 90px 187px;
-	background-color: $--Colors-Dark-Gray;
 
 	font-family: 'Montserrat Bold', sans-serif;
 	color: $--Colors-White;
@@ -24,4 +23,8 @@
 	@media screen and (max-width: 744px) {
 		font-size: $--Font-Size-Title-Mobile;
 	}
+}
+
+body {
+	background-color: $--Colors-Dark-Gray;
 }

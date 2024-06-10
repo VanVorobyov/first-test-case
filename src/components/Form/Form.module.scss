@@ -1,0 +1,97 @@
+@import '@/utils/styles/color-variables';
+@import '@/utils/styles/font-variables';
+
+.form {
+	max-width: 1000px;
+	width: 100%;
+	box-sizing: border-box;
+
+	display: flex;
+	flex-direction: column;
+	gap: 43px;
+	background-color: $--Colors-Middle-Gray;
+	border-radius: 15px;
+	padding: 33px 30px 57px;
+}
+
+.input_wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+.label {
+	font-family: $--Font-Montserrat-Bold;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	color: $--Colors-White;
+
+	&_error {
+		color: $--Colors-Red;
+	}
+
+	&[aria-required='true'] {
+		&:after {
+			content: '*';
+			color: $--Colors-Red;
+			margin-left: 4px;
+		}
+	}
+}
+
+.input {
+	border: none;
+	background-color: $--Colors-Dark-Gray;
+	border-radius: 60px;
+
+	height: 50px;
+	padding: 0 20px;
+
+	font-family: $--Font-Montserrat-Medium;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	color: $--Colors-White;
+
+	&_error {
+		border: 1px solid $--Colors-Red;
+	}
+}
+
+.textarea {
+	resize: vertical;
+	height: 100px;
+	padding: 15px 20px;
+
+	scrollbar-width: none;
+
+	border: 1.5px solid #188bf5;
+
+	background-color: $--Colors-Dark-Gray;
+	border-radius: 24px;
+
+	font-family: $--Font-Montserrat-Medium;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	color: $--Colors-White;
+
+	&_error {
+		border: 1px solid $--Colors-Red;
+	}
+}
+
+.error {
+	text-align: end;
+	margin: 0;
+	color: $--Colors-Red;
+	font-family: $--Font-Montserrat-Bold;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
