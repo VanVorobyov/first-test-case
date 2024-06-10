@@ -22,25 +22,24 @@ export const Card: FC = () => {
 	// };
 
 	return (
-		<>
-			<div className={styles.container}>
-				<div className={styles.card}>
-					<img
-						src={image || defaultimage}
-						alt={`Изображение ${title}`}
-						className={styles.card_image}
-					/>
-					<p className={styles.card_title}>{title}</p>
-					<p className={styles.card_description}>{description}</p>
-
-					<div className={styles.card_info}>
-						<p className={styles.card_detail_text}>{text}</p>
-						<button className={styles.card_detail_button} type="button">
-							СМОТРЕТЬ
-						</button>
-					</div>
+		<article className={styles.container}>
+			<div className={styles.card}>
+				<img
+					src={image || defaultimage}
+					alt={`Изображение ${title}`}
+					className={styles.card_image}
+				/>
+				<div className={styles.card_info}>
+					<p className={styles.card_detail_text}>{text}</p>
+					<button className={styles.card_detail_button} type="button">
+						СМОТРЕТЬ
+					</button>
 				</div>
 			</div>
-		</>
+			<div>
+				<p className={styles.card_title}>{title}</p>
+				<p className={styles.card_description}>{description}</p>
+			</div>
+		</article>
 	);
 };
