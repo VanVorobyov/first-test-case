@@ -13,11 +13,12 @@ export const CardList: FC = () => {
 	return (
 		<div className={styles.container}>
 			<ul className={styles.list}>
-				{cards.map((card: ICard) => (
-					<li className={styles.list_item}>
-						<Card key={card.id} {...card} />
-					</li>
-				))}
+				{cards &&
+					cards.map((card: ICard) => (
+						<li className={styles.list_item}>
+							<Card key={card.id} {...card} />
+						</li>
+					))}
 			</ul>
 		</div>
 	);

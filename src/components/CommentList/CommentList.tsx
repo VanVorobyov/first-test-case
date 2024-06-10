@@ -20,9 +20,10 @@ export const CommentList: FC<ICommentList> = ({ id }) => {
 
 	return (
 		<>
-			{comments.map((comment: IComment) => (
-				<Comment key={comment.id} {...comment} />
-			))}
+			{comments &&
+				comments.map((comment: IComment) => (
+					<Comment key={comment.id} {...comment} />
+				))}
 		</>
 	);
 };

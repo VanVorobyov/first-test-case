@@ -2,24 +2,10 @@ import { FC } from 'react';
 import styles from './Card.module.scss';
 import { ICard } from './types';
 import defaultimage from '@assets/default-image.jpg';
+import { Link } from 'react-router-dom';
 
-export const Card: FC = () => {
-	const data: ICard[] = [
-		{
-			id: 321,
-			image: 'https://picsum.photos/id/321/488/275',
-			title: 'Вечерний Ургант',
-			description: '1336 выпуск от 03.07.2020',
-			text: 'Сергей Смирнов — один из лучших «охотников на маньяков» в Москве. По особому приглашению губернатора он приступает к расследованию похищений и убийств мальчиков в родном городе — Хрустальном. По особому приглашению губернатора он приступает к расследованию похищений и убийств мальчиков в родном городе — Хрустальном. По особому...',
-			detail: 'http://fedevofferapi-info3.b4a.run/item/321',
-		},
-	];
-
-	const { title, description, image, text } = data[0];
-
-	// const handleClick = () => {
-	// 	window.open(detail, '_blank');
-	// };
+export const Card: FC<ICard> = (data: ICard) => {
+	const { id, title, description, image, text } = data;
 
 	return (
 		<article className={styles.container}>
@@ -32,7 +18,9 @@ export const Card: FC = () => {
 				<div className={styles.card_info}>
 					<p className={styles.card_detail_text}>{text}</p>
 					<button className={styles.card_detail_button} type="button">
-						СМОТРЕТЬ
+						<Link className={styles.card_detail_link} to={`/about/${id}`}>
+							СМОТРЕТЬ
+						</Link>
 					</button>
 				</div>
 			</div>
