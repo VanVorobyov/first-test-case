@@ -1,0 +1,95 @@
+@import '@/utils/styles/color-variables';
+@import '@/utils/styles/font-variables';
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	gap: 20px;
+}
+$primary-color: #ab99ca;
+$spacing: 2rem;
+
+.card {
+	position: relative;
+	overflow: hidden;
+	z-index: 2;
+
+	&_image {
+		width: 500px;
+		height: 300px;
+	}
+
+	&_title {
+		margin: 0;
+		font-family: $--Font-Montserrat-Bold;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 28px;
+		color: $--Colors-White;
+	}
+
+	&_description {
+		margin: 0;
+		font-family: $--Font-Montserrat-Bold;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 28px;
+		color: $--Colors-White;
+	}
+
+	&_info {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 460px;
+		height: 260px;
+		padding: 20px;
+		background-color: rgba(0, 0, 0, 0.5);
+		display: none;
+
+		.card:hover & {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			gap: 14px;
+		}
+	}
+
+	&_detail {
+		scrollbar-width: none;
+
+		&_text {
+			margin: 0;
+			font-family: $--Font-Montserrat-Bold;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 28px;
+			color: $--Colors-White;
+		}
+
+		&_button {
+			cursor: pointer;
+			width: 100px;
+			background-color: $--Colors-Middle-Gray;
+			padding: 4px;
+			border-radius: 14px;
+
+			margin: 0;
+			font-family: $--Font-Montserrat-Bold;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 28px;
+			color: $--Colors-White;
+		}
+
+		&_link {
+			text-decoration: none;
+			color: $--Colors-White;
+		}
+	}
+}
