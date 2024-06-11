@@ -61,68 +61,74 @@ export const Form: FC<IFormProps> = ({ id }) => {
 	}, [title, city, description]);
 
 	return (
-		<form onSubmit={handleSubmit} className={styles.form}>
-			<div className={styles.input_wrapper}>
-				<label
-					htmlFor={'name'}
-					className={clsx(styles.label, {
-						[styles.label_error]: error.title,
-					})}
-					aria-required="true"
-				>
-					Фамилия, имя, отчество
-				</label>
-				<input
-					className={clsx(styles.input, {
-						[styles.input_error]: error.title,
-					})}
-					type="text"
-					value={title}
-					name={'name'}
-					onChange={(event) => setTitle(event.target.value)}
-				/>
-				{error.title && <span className={styles.error}>{error.title}</span>}
+		<section className={styles.container}>
+			<div className={styles.wrapper}>
+				<h3 className={styles.title}>ОСТАВЬТЕ КОММЕНТАРИЙ</h3>
+				<p className={styles.subtitle}>Что вы думаете об этом видео?</p>
 			</div>
-			<div className={styles.input_wrapper}>
-				<label
-					htmlFor={'city'}
-					className={clsx(styles.label, {
-						[styles.label_error]: error.city,
-					})}
-					aria-required="true"
-				>
-					Город
-				</label>
-				<input
-					id={'city'}
-					className={clsx(styles.input, {
-						[styles.input_error]: error.city,
-					})}
-					type="text"
-					value={city}
-					name={'city'}
-					onChange={(event) => setCity(event.target.value)}
+			<form onSubmit={handleSubmit} className={styles.form}>
+				<div className={styles.input_wrapper}>
+					<label
+						htmlFor={'name'}
+						className={clsx(styles.label, {
+							[styles.label_error]: error.title,
+						})}
+						aria-required="true"
+					>
+						Фамилия, имя, отчество
+					</label>
+					<input
+						className={clsx(styles.input, {
+							[styles.input_error]: error.title,
+						})}
+						type="text"
+						value={title}
+						name={'name'}
+						onChange={(event) => setTitle(event.target.value)}
+					/>
+					{error.title && <span className={styles.error}>{error.title}</span>}
+				</div>
+				<div className={styles.input_wrapper}>
+					<label
+						htmlFor={'city'}
+						className={clsx(styles.label, {
+							[styles.label_error]: error.city,
+						})}
+						aria-required="true"
+					>
+						Город
+					</label>
+					<input
+						id={'city'}
+						className={clsx(styles.input, {
+							[styles.input_error]: error.city,
+						})}
+						type="text"
+						value={city}
+						name={'city'}
+						onChange={(event) => setCity(event.target.value)}
+					/>
+					{error.title && <span className={styles.error}>{error.title}</span>}
+				</div>
+				<div className={styles.input_wrapper}>
+					<label htmlFor={'description'} className={styles.label}>
+						Ваше мнение
+					</label>
+					<textarea
+						className={styles.textarea}
+						value={description}
+						name={'description'}
+						onChange={(event) => setDescription(event.target.value)}
+					/>
+				</div>
+				<Button
+					title={btnTitle}
+					isSecondary={isSuccess}
+					isError={isError}
+					type="submit"
+					width={'limited'}
 				/>
-				{error.title && <span className={styles.error}>{error.title}</span>}
-			</div>
-			<div className={styles.input_wrapper}>
-				<label htmlFor={'description'} className={styles.label}>
-					Ваше мнение
-				</label>
-				<textarea
-					className={styles.textarea}
-					value={description}
-					name={'description'}
-					onChange={(event) => setDescription(event.target.value)}
-				/>
-			</div>
-			<Button
-				title={btnTitle}
-				isSecondary={isSuccess}
-				isError={isError}
-				type="submit"
-				width={'limited'}
-			/>
-		</form>
+			</form>
+		</section>
 	);
 };

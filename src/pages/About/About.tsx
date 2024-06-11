@@ -2,7 +2,7 @@ import styles from './About.module.scss';
 import { FilmInfo } from '@components/FilmInfo/FilmInfo.tsx';
 import { CommentList } from '@components/CommentList/CommentList.tsx';
 import { useFetchFilmInfo } from '@hooks/useFetchFilmInfo.ts';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { Form } from '@components/Form/Form.tsx';
 
 export const About = () => {
@@ -19,13 +19,16 @@ export const About = () => {
 	}
 
 	return (
-		<>
-			<div className={styles.container}>
+		<div className={styles.container}>
+			<div className={styles.wrapper}>
 				<h1 className={styles.title}>ВЫБРАННОЕ ВИДЕО</h1>
-				<FilmInfo {...filmInfo} />
-				<CommentList id={id as string} />
-				<Form id={id as string} />
+				<Link className={styles.link} to={'/'}>
+					все ВИДЕО
+				</Link>
 			</div>
-		</>
+			<FilmInfo {...filmInfo} />
+			<CommentList id={id as string} />
+			<Form id={id as string} />
+		</div>
 	);
 };

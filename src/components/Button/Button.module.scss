@@ -16,6 +16,10 @@
 
 	&_limited {
 		width: 300px;
+
+		@media screen and (max-width: 450px) {
+			width: auto;
+		}
 	}
 
 	&_box {

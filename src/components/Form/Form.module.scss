@@ -1,6 +1,70 @@
 @import '@/utils/styles/color-variables';
 @import '@/utils/styles/font-variables';
 
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	gap: 48px;
+	box-sizing: border-box;
+
+	@media (min-width: 1024px) and (max-width: 1439px) {
+		gap: 40px;
+	}
+	@media screen and (max-width: 1023px) {
+		gap: 30px;
+	}
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	gap: 38px;
+
+	@media screen and (max-width: 1439px) {
+		gap: 0;
+	}
+}
+
+.title {
+	margin: 0;
+
+	font-family: $--Font-Montserrat-Bold;
+	color: $--Colors-White;
+	font-size: $--Font-Size-Title-1440;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+
+	@media (min-width: 1024px) and (max-width: 1439px) {
+		font-size: $--Font-Size-Title-1024;
+	}
+
+	@media (min-width: 744px) and (max-width: 1023px) {
+		font-size: $--Font-Size-Title-744;
+	}
+
+	@media screen and (max-width: 743px) {
+		font-size: $--Font-Size-Title-Mobile;
+	}
+}
+
+.subtitle {
+	margin: 0;
+
+	font-family: $--Font-Montserrat-Medium;
+	color: $--Colors-White;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+
+	@media screen and (max-width: 1439px) {
+		font-size: 16px;
+	}
+}
+
 .form {
 	max-width: 1000px;
 	width: 100%;
@@ -12,6 +76,25 @@
 	background-color: $--Colors-Middle-Gray;
 	border-radius: 15px;
 	padding: 33px 30px 57px;
+
+	@media (min-width: 1024px) and (max-width: 1439px) {
+		min-width: 684px;
+		padding: 29px 31px 29px 18px;
+	}
+
+	@media (min-width: 744px) and (max-width: 1023px) {
+		min-width: 684px;
+		padding: 29px 31px 29px 18px;
+	}
+
+	@media screen and (max-width: 743px) {
+		max-width: 556px;
+		min-width: 328px;
+		padding: 30px 31px 25px;
+	}
+	@media screen and (max-width: 450px) {
+		padding: 30px 31px 25px;
+	}
 }
 
 .input_wrapper {

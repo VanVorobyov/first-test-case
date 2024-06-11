@@ -12,7 +12,7 @@ export const FilmInfo = (data: IFilmInfo) => {
 	} = data;
 
 	return (
-		<div className={styles.container}>
+		<section className={styles.container}>
 			<div className={styles.wrapper}>
 				<div className={styles.film_wrapper}>
 					<h2 className={styles.film_title}>{title}</h2>
@@ -54,6 +54,6 @@ export const FilmInfo = (data: IFilmInfo) => {
 				src={image}
 				alt={`Обложка фильма "${title}"`}
 			/>
-		</div>
+		</section>
 	);
 };
