@@ -5,9 +5,9 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	gap: 80px;
+	gap: 21px;
 	height: 100%;
-	padding: 90px 187px;
+	padding: 90px 37px;
 	background-color: $--Colors-Dark-Gray;
 	box-sizing: border-box;
 
@@ -15,11 +15,12 @@
 		max-width: 1439px;
 		padding: 85px 24px 66px;
 		margin: 0 auto;
-		gap: 60px;
+		gap: 21px;
 	}
 
 	@media (min-width: 744px) and (max-width: 1023px) {
 		max-width: 1023px;
+		gap: 21px;
 
 		padding: 74px 24px 57px;
 		margin: 0 auto;
@@ -28,7 +29,6 @@
 	@media screen and (max-width: 743px) {
 		min-width: 375px;
 		padding: 58px 24px 43px;
-		gap: 30px;
 	}
 }
 
@@ -36,6 +36,21 @@
 	max-width: 1000px;
 	display: flex;
 	justify-content: space-between;
+}
+
+.comment_wrapper {
+	max-width: 1000px;
+	display: flex;
+	flex-direction: column;
+	gap: 80px;
+
+	@media (min-width: 744px) and (max-width: 1439px) {
+		gap: 60px;
+	}
+
+	@media screen and (max-width: 743px) {
+		gap: 30px;
+	}
 }
 
 .link {

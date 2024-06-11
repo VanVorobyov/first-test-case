@@ -1,0 +1,14 @@
+.container {
+}
+
+.card {
+	&_image {
+		width: 300px;
+		height: auto;
+		aspect-ratio: 300 / 600;
+
+		object-fit: cover;
+
+		border-radius: 15px;
+	}
+}

@@ -3,9 +3,31 @@
 
 .container {
 	display: flex;
-	flex-direction: column;
+	// flex-direction: column;
 	justify-content: center;
-	align-items: center;
+	// align-items: center;
+}
+
+.aside {
+	display: flex;
+	flex-direction: column;
+	padding: 150px 24px;
+
+	@media screen and (max-width: 1024px) {
+		display: none;
+	}
+
+	@media screen and (max-width: 1439px) {
+		padding: 132px 24px;
+	}
+
+	@media (min-width: 744px) and (max-width: 1023px) {
+		padding: 111px 24px;
+	}
+
+	@media screen and (max-width: 744px) {
+		padding: 104px 24px;
+	}
 }
 
 body {

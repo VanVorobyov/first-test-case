@@ -7,7 +7,7 @@
 	justify-content: flex-start;
 	gap: 21px;
 	height: 100%;
-	padding: 90px 187px;
+	padding: 90px 37px;
 
 	box-sizing: border-box;
 
@@ -18,26 +18,24 @@
 	font-weight: 700;
 	line-height: normal;
 
-	@media screen and (max-width: 1439px) {
-		font-size: $--Font-Size-Title-1024;
+	@media (min-width: 1024px) and (max-width: 1439px) {
 		max-width: 1439px;
-		padding: 62px 24px 63px;
+		padding: 85px 24px 66px;
 		margin: 0 auto;
-		gap: 60px;
+		gap: 21px;
 	}
 
 	@media (min-width: 744px) and (max-width: 1023px) {
 		max-width: 1023px;
+		gap: 21px;
 
-		padding: 41px 24px 42px;
+		padding: 74px 24px 57px;
 		margin: 0 auto;
 	}
 
-	@media screen and (max-width: 744px) {
-		font-size: $--Font-Size-Title-Mobile;
+	@media screen and (max-width: 743px) {
 		min-width: 375px;
-		padding: 34px 24px 51px;
-		gap: 30px;
+		padding: 58px 24px 43px;
 	}
 }
 

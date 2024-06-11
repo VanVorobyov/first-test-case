@@ -26,9 +26,11 @@ export const About = () => {
 					все ВИДЕО
 				</Link>
 			</div>
-			<FilmInfo {...filmInfo} />
-			<CommentList id={id as string} />
-			<Form id={id as string} />
+			<div className={styles.comment_wrapper}>
+				<FilmInfo {...filmInfo} />
+				<CommentList id={id as string} />
+				<Form id={id as string} />
+			</div>
 		</div>
 	);
 };
