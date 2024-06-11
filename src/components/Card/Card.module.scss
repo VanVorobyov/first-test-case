@@ -6,6 +6,7 @@
 	flex-direction: column;
 	justify-content: center;
 	gap: 20px;
+	box-sizing: border-box;
 
 	@media (min-width: 744px) and (max-width: 1439px) {
 		gap: 9px;
@@ -40,7 +41,7 @@
 		line-height: 20px;
 		color: $--Colors-White;
 
-		@media (min-width: 375px) and (max-width: 1439px) {
+		@media (min-width: 375px) and (max-width: 743px) {
 			font-size: 14px;
 			font-style: normal;
 			font-weight: 700;
@@ -58,6 +59,9 @@
 		padding: 20px;
 		background-color: rgba(0, 0, 0, 0.5);
 		display: none;
+		box-sizing: border-box;
+		overflow-y: auto;
+		scrollbar-width: none;
 
 		@media (min-width: 900px) and (max-width: 1240px) {
 			padding: 10px;
@@ -66,9 +70,9 @@
 		}
 
 		@media (min-width: 375px) and (max-width: 900px) {
-			padding: 5px;
-			width: 100% -10px;
-			height: 100% -10px;
+			padding: 8px;
+			width: 100% -16px;
+			height: 100% -16px;
 		}
 
 		.card:hover & {
@@ -77,11 +81,7 @@
 			justify-content: flex-start;
 			gap: 24px;
 
-			@media (min-width: 744px) and (max-width: 1023px) {
-				gap: 8px;
-			}
-
-			@media (min-width: 375px) and (max-width: 743px) {
+			@media (min-width: 375px) and (max-width: 1023px) {
 				gap: 8px;
 			}
 		}
@@ -99,14 +99,23 @@
 			line-height: 20px; /* 142.857% */
 
 			@media (min-width: 975px) and (max-width: 1240px) {
-				font-size: 12px;
+				font-size: 14px;
 				font-weight: 400;
-				line-height: 12px;
+				line-height: 20px;
 			}
 
-			@media (min-width: 375px) and (max-width: 975px) {
+			@media (min-width: 800px) and (max-width: 975px) {
+				font-size: 14px;
+				line-height: 18px; /* 142.857% */
+			}
+
+			@media (min-width: 660px) and (max-width: 800px) {
+				font-size: 10px;
+				line-height: 16px; /* 142.857% */
+			}
+
+			@media (min-width: 375px) and (max-width: 660px) {
 				font-size: 8px;
-				font-weight: 400;
 				line-height: 12px;
 			}
 		}
@@ -140,7 +149,7 @@
 			@media (min-width: 900px) and (max-width: 1023px) {
 				width: 200px;
 				padding: 5px;
-				font-size: 8px;
+				font-size: 10px;
 				font-style: normal;
 				font-weight: 400;
 				line-height: 16px; /* 285.714% */

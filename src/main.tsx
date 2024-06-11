@@ -5,11 +5,12 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Layout } from '@/pages/Layout/Layout.tsx';
 import { About } from '@/pages/About/About.tsx';
 import { NoMatch } from '@/pages/NoMatch/NoMatch.tsx';
+import { Home } from './pages/Home/Home';
 
 const router = createBrowserRouter([
 	{
 		path: '/',
-		element: <Layout />,
+		element: <Home />,
 	},
 	{
 		path: '/about/:id',
@@ -23,6 +24,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
 	<React.StrictMode>
-		<RouterProvider router={router} />
+		<Layout>
+			<RouterProvider router={router} />
+		</Layout>
 	</React.StrictMode>
 );

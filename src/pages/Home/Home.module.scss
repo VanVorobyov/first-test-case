@@ -1,0 +1,65 @@
+@import '@/utils/styles/color-variables';
+@import '@/utils/styles/font-variables';
+
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	gap: 21px;
+	height: 100%;
+	padding: 90px 187px;
+
+	box-sizing: border-box;
+
+	font-family: 'Montserrat Bold', sans-serif;
+	color: $--Colors-White;
+	font-size: $--Font-Size-Title-1440;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+
+	@media screen and (max-width: 1439px) {
+		font-size: $--Font-Size-Title-1024;
+		max-width: 1439px;
+		padding: 62px 24px 63px;
+		margin: 0 auto;
+		gap: 60px;
+	}
+
+	@media (min-width: 744px) and (max-width: 1023px) {
+		max-width: 1023px;
+
+		padding: 41px 24px 42px;
+		margin: 0 auto;
+	}
+
+	@media screen and (max-width: 744px) {
+		font-size: $--Font-Size-Title-Mobile;
+		min-width: 375px;
+		padding: 34px 24px 51px;
+		gap: 30px;
+	}
+}
+
+.title {
+	margin: 0;
+
+	font-family: 'Montserrat Bold', sans-serif;
+	color: $--Colors-White;
+	font-size: $--Font-Size-Title-1440;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+
+	@media (min-width: 1024px) and (max-width: 1439px) {
+		font-size: $--Font-Size-Title-1024;
+	}
+
+	@media (min-width: 744px) and (max-width: 1023px) {
+		font-size: $--Font-Size-Title-744;
+	}
+
+	@media screen and (max-width: 743px) {
+		font-size: $--Font-Size-Title-Mobile;
+	}
+}
