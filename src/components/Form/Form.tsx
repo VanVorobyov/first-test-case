@@ -58,7 +58,7 @@ export const Form: FC<IFormProps> = ({ id }) => {
 					});
 			}
 		};
-	}, [title, city, description]);
+	}, [id, title, city, description]);
 
 	return (
 		<section className={styles.container}>

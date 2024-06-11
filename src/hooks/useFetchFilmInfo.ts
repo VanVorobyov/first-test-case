@@ -26,7 +26,7 @@ export const useFetchFilmInfo = (id: string) => {
 		};
 
 		fetchFilmInfo();
-	}, [id]);
+	}, [addItem, filmInfo, id]);
 
 	return { filmInfo, loading, error };
 };
